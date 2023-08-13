@@ -1,7 +1,6 @@
 import pickle
 import pandas as pd
 import streamlit as st
-import model
 
 st.image('background_image.png')
 
