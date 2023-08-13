@@ -1,12 +1,15 @@
 import pickle
 import pandas as pd
 import streamlit as st
+import joblib
 
 st.image('background_image.png')
 
 st.title('Stroke Prediction')
-with open('model.pkl', 'rb') as model_file:
-    loaded_model = pickle.load(model_file, protocol=pickle.HIGHEST_PROTOCOL)
+#with open('model.pkl', 'rb') as model_file:
+#    loaded_model = pickle.load(model_file, protocol=pickle.HIGHEST_PROTOCOL)
+
+loaded_model = joblib.load('model.pkl')
 
 gender_ = st.multiselect('What is your gender?', ['Female', 'Male'], key = 0)
 age_ = st.slider('Age', min_value = 0, max_value = 100)
