@@ -1,6 +1,7 @@
 import pickle
 import pandas as pd
 import streamlit as st
+import xgboost 
 
 st.image('background_image.png')
 
